@@ -11,7 +11,8 @@ const AlbumDetail = ({ album }) => {
         headerTextStyle, 
         headerContentStyle, 
         thumbnailContainerStyle, 
-        imageStyle 
+        imageStyle,
+        cardStyle
     } = styles;
 
     return (
@@ -34,8 +35,8 @@ const AlbumDetail = ({ album }) => {
                     source={{ uri: image }} 
                 />
             </CardSection>
-            <CardSection>
-                <Button />
+            <CardSection style={cardStyle}>
+                <Button onPress={() => console.log(title)} />
             </CardSection>
         </Card>
     );
@@ -64,6 +65,9 @@ const styles = {
         height: 350,
         flex: 1,
         width: null
+    },
+    cardStyle: {
+        paddingBottom: 5
     }
 };
 
